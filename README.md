@@ -5,18 +5,27 @@ alias for Mac
 ## cd
 
 alias ".."="cd .."
+
 alias "..."="cd ../.."
+
 alias "...."="cd ../../.."
 
 ## kubectl
 
 alias clr="clear"
+
 alias mk="make"
+
 alias k="kubectl"
+
 alias kg="kubectl get"
+
 alias ka="kubectl apply"
+
 alias kcf="kubectl create -f"
+
 alias kd="kubectl describe"
+
 alias klf="kubectl logs -f"
 
 ## git
@@ -40,7 +49,9 @@ alias klf="kubectl logs -f"
 ## python 
 
 alias py="python3"
+
 alias pi="pip3 install"
+
 alias sv="source venv/bin/active"
 
 # grep/egrep
