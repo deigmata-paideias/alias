@@ -1,24 +1,76 @@
 # Alias
 
-alias for Mac
+alias for Linux/Mac
 
-## cd
+## nefetch and onefetch
 
-alias ".."="cd .."
+alias s="neofetch"
 
-alias "..."="cd ../.."
+alias c="onefetch"
 
-alias "...."="cd ../../.."
+## make
 
-## kubectl
+alias mk="make"
+
+## zsh
+
+alias sz="source ~/.zshrc"
+
+## fzf
+
+alias f="fzf"
+
+alias ff='fzf --preview "bat --color=always {}"'
+
+## grep
+
+alias grep="grep --color=auto"
+
+## claude
+
+alias cl='claude --dangerously-skip-permissions --append-system-prompt "$(cat ~/.claude/system-prompt.txt)"'
+
+## du
+
+alias du1="du -hd 1"
+
+## clear
 
 alias clr="clear"
 
-alias mk="make"
+alias c="clear"
+
+## cd
+
+alias "."="cd .."
+
+alias ".."="cd ../.."
+
+alias "..."="cd ../../.."
+
+alias "...."="cd ../../../.."
+
+or:
+
+alias "cd1"="cd .."
+
+alias "cd2"="cd ../.."
+
+alias "cd3"="cd ../../.."
+
+alias "cd4"="cd ../../../.."
+
+## kubectl
 
 alias k="kubectl"
 
 alias kg="kubectl get"
+
+alias ke="kubectl edit"
+
+alias kexec="kubectl exec -it"
+
+alias klf="kubectl logs -f"
 
 alias ka="kubectl apply"
 
@@ -26,15 +78,15 @@ alias kcf="kubectl create -f"
 
 alias kd="kubectl describe"
 
-alias klf="kubectl logs -f"
-
 ## git
 
 ～/.gitconfig
 
 ```
 [alias]
+    # git branch ==> git b
     br = branch
+    # git commit -s -m "xx" ==> git c "xxx"
     c  = commit -s -m
     co = checkout
     ch = cherry-pick
@@ -44,7 +96,25 @@ alias klf="kubectl logs -f"
     type = cat-file -t
 ```
 
+alias gg="git clone"
+
+alias gpl="git pull"
+
+alias gps="git push"
+
+alias ga="git add ."
+
+alias gss="git stash save"
+
+alias gsp="git stash pop"
+
 ## docker
+
+alias dex="sudo docker exec -it"
+
+alias drm="docker rm $(docker ps -a -q)" # remove all containers
+
+alias dclean="docker system prune -af" # clean system
 
 ## python 
 
@@ -54,6 +124,12 @@ alias pi="pip3 install"
 
 alias sv="source venv/bin/active"
 
+# pyserve 58080
+alias pyserve="python3 -m http.server"
+
 # grep/egrep
 
 alias grep="grep --color=auto"
+
+# macos ip
+alias myip=ifconfig en1 | grep inet | grep -v inet6 | cut -d ' ' -f2
