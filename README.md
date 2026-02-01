@@ -2,6 +2,8 @@
 
 alias for Linux/Mac
 
+> Tips: use `alias` show system alias.
+
 ## nefetch and onefetch
 
 alias s="neofetch"
