@@ -126,8 +126,7 @@ alias pi="pip3 install"
 
 alias sv="source venv/bin/active"
 
-# pyserve 58080
-alias pyserve="python3 -m http.server"
+alias pyserve="python3 -m http.server" # pyserve 58080
 
 # grep/egrep
 
