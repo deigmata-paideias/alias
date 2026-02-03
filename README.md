@@ -128,9 +128,5 @@ alias sv="source venv/bin/active"
 
 alias pyserve="python3 -m http.server" # pyserve 58080
 
-# grep/egrep
-
-alias grep="grep --color=auto"
-
 # macos ip
 alias myip=ifconfig en1 | grep inet | grep -v inet6 | cut -d ' ' -f2
