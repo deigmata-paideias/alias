@@ -6,9 +6,11 @@ alias for Linux/Mac
 
 ## nefetch and onefetch
 
-alias s="neofetch"
+alias sf="neofetch"
 
-alias c="onefetch"
+alias of="onefetch"
+
+alias ff="fastfetch"
 
 ## make
 
@@ -111,6 +113,7 @@ alias gss="git stash save"
 alias gsp="git stash pop"
 
 // fzf search branch name and checkout
+
 alias gco="git branch | fzf | xargs git checkout"
 
 ## docker
