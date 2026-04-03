@@ -94,7 +94,7 @@ alias kd="kubectl describe"
     ch = cherry-pick
     dump = cat-file -p
     hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
-    st = status
+    st = "!f() { stats=$( { if git rev-parse --verify HEAD >/dev/null 2>&1; then git diff --numstat HEAD --; else git diff --cached --numstat --; git diff --numstat --; fi; } 2>/dev/null | { add=0; del=0; while\n  read -r a d _; do [ -z \"$a\" ] && a=0; [ \"$a\" = \"-\" ] && a=0; [ -z \"$d\" ] && d=0; [ \"$d\" = \"-\" ] && d=0; add=$((add + a)); del=$((del + d)); done; printf \"%s %s\" \"$add\" \"$del\"; } ); add=${stats% *}; del=${stats#* }; total=$((add + del));\n  green=$(git config --get-color \"\" green); red=$(git config --get-color \"\" red); reset=$(git config --get-color \"\" reset); echo \"Change lines: $total  ${green}+${add}${reset}  ${red}-${del}${reset}\"; git status \"$@\"; }; f"
     type = cat-file -t
 ```
 
@@ -109,6 +109,9 @@ alias ga="git add ."
 alias gss="git stash save"
 
 alias gsp="git stash pop"
+
+// fzf search branch name and checkout
+alias gco="git branch | fzf | xargs git checkout"
 
 ## docker
 
